@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { ThemeProvider } from './context/ThemeContext'
-import Header from './components/Header'
-import Navigation from './components/Navigation'
-import Year1Calculator from './components/Year1Calculator'
-import Year2Calculator from './components/Year2Calculator'
-import Documents from './components/Documents'
+import { useState } from 'react'
+import { ThemeProvider } from './shared/context/ThemeContext'
+import Header from './shared/components/Header'
+import Navigation from './shared/components/Navigation'
+import Year1Calculator from './features/year1-calculator/Year1Calculator'
+import Year2Calculator from './features/year2-calculator/Year2Calculator'
+import Documents from './features/documents/Documents'
 
 function SectionTitle({ children }) {
   return (
