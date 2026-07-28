@@ -1,5 +1,7 @@
+import { isValidGrade, isValidYear } from './validators'
+
 export function computeM(mg) {
-  if (mg === '' || mg === null || isNaN(mg)) return null
+  if (!isValidGrade(mg)) return null
   const value = Number(mg)
   if (value >= 15) return 100
   if (value > 10 && value < 15) return 20 * (value - 10)
@@ -7,13 +9,13 @@ export function computeM(mg) {
 }
 
 export function computeB1(birthYear, contestYear, offset) {
-  if (!birthYear || isNaN(birthYear)) return null
+  if (!isValidYear(birthYear) || !isValidYear(contestYear)) return null
   return Number(birthYear) >= Number(contestYear) - offset ? 5 : 0
 }
 
 export function computeB2(bacAvg, isSessionControle) {
   if (isSessionControle) return 0
-  if (bacAvg === '' || bacAvg === null || isNaN(bacAvg)) return null
+  if (!isValidGrade(bacAvg)) return null
   const value = Number(bacAvg)
   if (value >= 16) return 20
   if (value >= 14) return 15
