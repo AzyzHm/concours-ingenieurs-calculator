@@ -1,9 +1,10 @@
 import React, { useMemo, useState } from 'react'
-import FormField from './FormField'
-import FormSection from './FormSection'
-import ScoreGauge from './ScoreGauge'
-import ResultBanner from './ResultBanner'
-import { computeM, computeB1, computeB2, computeScoreYear2, getBandYear2 } from '../utils/scoring'
+import FormField from '../../shared/components/FormField'
+import FormSection from '../../shared/components/FormSection'
+import ScoreGauge from '../../shared/components/ScoreGauge'
+import ResultBanner from '../../shared/components/ResultBanner'
+import { computeM, computeB1, computeB2 } from '../../shared/utils/scoring'
+import { computeScoreYear2, getBandYear2 } from './year2.scoring'
 
 const initialState = {
   contestYear: 2025,

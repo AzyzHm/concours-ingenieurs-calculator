@@ -1,19 +1,17 @@
 import React, { useMemo, useState } from 'react'
-import FormField from './FormField'
-import FormSection from './FormSection'
-import ScoreGauge from './ScoreGauge'
-import ResultBanner from './ResultBanner'
+import FormField from '../../shared/components/FormField'
+import FormSection from '../../shared/components/FormSection'
+import ScoreGauge from '../../shared/components/ScoreGauge'
+import ResultBanner from '../../shared/components/ResultBanner'
+import { computeM, computeB1, computeB2 } from '../../shared/utils/scoring'
 import {
-  computeM,
   computeRi,
   computeR,
-  computeB1,
-  computeB2,
   computeML,
   computeScoreA,
   computeGlobalYear1,
   getBandYear1,
-} from '../utils/scoring'
+} from './year1.scoring'
 import { Info } from 'lucide-react'
 
 const initialState = {
